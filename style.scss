@@ -1,5 +1,16 @@
+@font-face {
+    font-family: 'Resin';
+    src:  url('./fonts/RESIN/RESIN-Regular.ttf') format('ttf'),
+          url('./fonts/RESIN/RESIN-Regular.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Anonymous Pro Regular';
+    src:  url('./fonts/anonymous-pro/AnonymousPro-Regular.ttf') format('ttf');
+  }
+
 :root {
-    font-family: 'Inconsolata', Helvetica, Arial, sans-serif;
+    font-family: 'Anonymous Pro Regular', monospace;
     line-height: 1.5;
     font-weight: 400;
 
@@ -24,6 +35,7 @@ header {
     text-align: center;
 
     h1{
+        font-family: 'Resin', Helvetica, sans-serif;
         margin: 0;
     }
 }
