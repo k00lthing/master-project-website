@@ -1,3 +1,6 @@
-import './style.css'
+import './style.scss'
+import { createHeader } from './header.js'
+import { createNav } from './navigation.js'
 
-console.log('about')
+createHeader(document.querySelector('body'))
+createNav(document.querySelector('body'))
