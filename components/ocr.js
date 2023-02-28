@@ -21,7 +21,6 @@ export function createOCR(element) {
     const imgSelector = document.querySelector('#file-img')
     const imgPreview = document.querySelector('#selected-image')
 
-    let language = langSelector.value
     let image = null
 
     imgSelector.addEventListener("change", handleFiles, false)
@@ -37,7 +36,7 @@ export function createOCR(element) {
     button.addEventListener('click', (event) => {
 
         Tesseract.recognize(
-            image, language,
+            image, langSelector.value,
             {
                 logger: m => console.log(m)
             }
