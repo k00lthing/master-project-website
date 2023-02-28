@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'Resin';
-    src:  url('./fonts/RESIN/RESIN-Regular.ttf') format('ttf'),
-          url('./fonts/RESIN/RESIN-Regular.woff') format('woff');
-  }
+    src: url('./fonts/RESIN/RESIN-Regular.ttf') format('ttf'),
+        url('./fonts/RESIN/RESIN-Regular.woff') format('woff');
+}
 
-  @font-face {
+@font-face {
     font-family: 'Anonymous Pro Regular';
-    src:  url('./fonts/anonymous-pro/AnonymousPro-Regular.ttf') format('ttf');
-  }
+    src: url('./fonts/anonymous-pro/AnonymousPro-Regular.ttf') format('ttf');
+}
 
 :root {
     font-family: 'Anonymous Pro Regular', monospace;
@@ -25,6 +25,11 @@
     -webkit-text-size-adjust: 100%;
 }
 
+body{
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
 
 header {
     max-width: fit-content;
@@ -40,6 +45,13 @@ header {
     }
 }
 
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: stretch;
+}
+
 nav {
     padding: 1em;
     background-color: black;
@@ -53,7 +65,7 @@ nav {
         justify-content: space-around;
         align-items: flex-start;
         flex-wrap: wrap;
-        
+
 
         li {
             a {
@@ -61,5 +73,13 @@ nav {
                 text-decoration: none;
             }
         }
+    }
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    main {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
