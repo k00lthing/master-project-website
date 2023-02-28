@@ -20,7 +20,6 @@ export function createOCR(element) {
     const langSelector = document.querySelector('#lang')
     const imgSelector = document.querySelector('#file-img')
     const imgPreview = document.querySelector('#selected-image')
-    console.log(imgPreview)
 
     let language = langSelector.value
     let image = null
@@ -30,8 +29,7 @@ export function createOCR(element) {
     function handleFiles() {
         const fileList = this.files /* now you can work with the file list */
         image = fileList[0]
-        const objectURL = window.URL.createObjectURL(fileList[0])
-       
+        const objectURL = window.URL.createObjectURL(fileList[0]) 
         imgPreview.src = objectURL
 
     }
