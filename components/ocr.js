@@ -10,21 +10,20 @@ export function createOCR(element) {
     element.insertAdjacentHTML('afterbegin',
         `
         <div class="tesseract-input">
-        <h2>OCR Testing Environment</h2>
-        <p>Select language and image with text to recognize.</p>
-    <select id="lang">
-        <option value='eng' selected> English </option>
-        <option value='deu'> German </option>
-    </select>
-  <input type="file" id="file-img" accept="image/jpg, image/png, image/bmp, image/pbm" />
-  <img id="selected-image" src="" />
-  <button id="start-ocr">Recognize text</button>
-  </div>
-
-  <div id="log" class="tesseract-results">
-    <p class="progress"></p>
-    <p class="status"></p>
-  </div>
+            <h2>OCR Testing Environment</h2>
+            <p>Select language and image with text to recognize.</p>
+            <select id="lang">
+                <option value='eng' selected> English </option>
+                <option value='deu'> German </option>
+            </select>
+            <input type="file" id="file-img" accept="image/jpg, image/png, image/bmp, image/pbm" />
+            <img id="selected-image" src="" />
+            <button id="start-ocr">Recognize text</button>
+        </div>
+        <div id="log" class="tesseract-results">
+            <p class="progress"></p>
+            <p class="status"></p>
+        </div>
     `)
 
     const button = document.querySelector("#start-ocr")
