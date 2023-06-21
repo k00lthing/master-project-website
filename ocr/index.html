@@ -11,12 +11,44 @@
 <body>
   <main id="ocr-env">
     <h1>Tesseract OCR</h1>
-    <article class="three-col">
-      <span><p>Tesseract OCR (Optical Character Recognition) is an open-source software library developed by Google that enables the recognition and extraction of text from various sources, such as images, scanned documents, and PDF files. It was initially developed at Hewlett-Packard Laboratories in the 1980s, and later maintained and enhanced by different organizations.</p>
-        Tesseract OCR utilizes machine learning algorithms and pattern recognition techniques to analyse the visual patterns of characters and convert them into machine-readable text. It supports over 100 languages, including major scripts like Latin, Cyrillic, Arabic, and Chinese.
-        The library has been widely adopted in various applications and industries. It provides APIs and command-line interfaces, making it accessible for developers to integrate into their software systems. Tesseract OCR can be used for tasks such as document digitization, text extraction from images for indexing and searching, automatic data entry, and more.</span>
-      <p>Placeholder text</p>
-      <a href="http://tesseract.projectnaptha.com/" title="To the official page von tesseract.js" target="_blank">More about tesseract</a>
+    <article>
+        <h3> What is Tesseract?</h3>
+        <p><em>Tesseract OCR (Optical Character Recognition)</em> is an open-source software library that
+          enables the recognition and extraction of text from various sources, such as images,
+          scanned documents, and PDF files. It was initially developed at Hewlett-Packard Laboratories in the 1980s, and
+          later maintained and enhanced by different organizations.</p>
+        <p>Tesseract OCR utilizes machine learning and pattern recognition techniques to analyse the visual patterns of
+          characters and convert them into machine-readable text. As of today it supports over 100 languages, including
+          major scripts like Latin, Cyrillic, Arabic, and Chinese. The library has been widely adopted in various
+          applications and industries. It provides APIs and command-line interfaces, making it accessible for developers
+          to integrate into their software systems. Tesseract OCR can be used for tasks such as document digitization,
+          text extraction from images for indexing and searching, automatic data entry, and more.</p>
+          <a href="https://github.com/tesseract-ocr" title="To the GitHub Organisation Tesseract OCR"
+            target="_blank">Tesseract OCR on GitHub</a>
+        <h3>How it works?</h3>
+        <p>Tesseract's pattern recognition technology involves several key steps. First, it performs image
+          preprocessing (adaptive thresholding), which includes tasks like binarization, noise removal, and deskewing to enhance the quality of
+          the input image. Next, Tesseract divides the resulting binary image into smaller chunks and identifies individual characters or
+          text regions through a process known as segmentation. Then, using a combination of statistical models and
+          neural networks, Tesseract compares these segmented patterns with its vast knowledge base of character and
+          language models to recognize and interpret the text accurately.</p>
+        <p>Tesseract OCR assigns a confidence score to each recognized character or word as part of its output. The
+          confidence score represents the level of certainty or reliability of the recognition result. It indicates how
+          confident Tesseract is in its recognition accuracy for a particular character or word. The confidence score
+          typically ranges from 0 to 100, with higher scores indicating higher confidence. In the scope of this project,
+          we will be using the confidence score to determine how well the developed font disguises itself from the
+          Tesseract OCR engine.</p>
+        <h3>Limitations of used implementation </h3>
+        <p>While tesseract.js offers powerful OCR capabilities, it also has some noteworthy limitations:
+          <ol>
+            <li>Accuracy: While Tesseract OCR is known for its high accuracy, the accuracy of tesseract.js may be slightly lower compared to the original Tesseract engine. This can be attributed to factors such as the limitations of running OCR in a browser environment, variations in image quality, and the inherent complexities of character recognition.</li>
+            <li>Performance: Tesseract.js heavily relies on WebAssembly for running the OCR engine in the browser. While WebAssembly provides near-native performance, it may still be slower compared to running Tesseract OCR on a dedicated server or desktop application. Large images or complex documents can lead to longer processing times.</li>
+            <li>Language Support: Tesseract OCR supports a wide range of languages; however, not all languages have the same level of accuracy and recognition quality.  In the scope of this project, we only implement English and German text recognition. </li>
+            <li>Continuous Development: Tesseract.js is an open-source project that relies on community contributions and updates. While it has seen active development and improvements, it's essential to keep track of the latest versions and updates to benefit from bug fixes, performance enhancements, and new features. This project’s testing environment runs on tesseract.js v4.</li>
+          </ol>
+          Despite these limitations, tesseract.js remains our tool of choice to test  developed fonts, and understanding these limitations can help manage expectations and utilize the library effectively.</p>
+        <a href="http://tesseract.projectnaptha.com/" title="To the official page of tesseract.js" target="_blank">More
+          about tesseract.js</a>
     </article>
   </main>
   <script type="module" src="/ocr/main.js"></script>
