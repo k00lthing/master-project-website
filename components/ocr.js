@@ -7,10 +7,11 @@ import Tesseract from 'tesseract.js'
  */
 export function createOCR(element) {
 
-    element.insertAdjacentHTML('beforeend',
+    element.insertAdjacentHTML('afterbegin',
         `
         <div class="tesseract-input">
-        <h2>Upload an image with text</h2>
+        <h2>OCR Testing Environment</h2>
+        <p>Select language and image with text to recognize.</p>
     <select id="lang">
         <option value='eng' selected> English </option>
         <option value='deu'> German </option>
@@ -20,7 +21,7 @@ export function createOCR(element) {
   <button id="start-ocr">Recognize text</button>
   </div>
 
-  <div id="log">
+  <div id="log" class="tesseract-results">
     <p class="progress"></p>
     <p class="status"></p>
   </div>
@@ -52,7 +53,7 @@ export function createOCR(element) {
             image, langSelector.value,
             {
                 logger: m => {
-                    progress.innerHTML = m.progress * 100 + "%"
+                    progress.innerHTML = Math.round(m.progress * 100) + "%"
                     status.innerHTML = m.status
                 }
             }
@@ -62,16 +63,13 @@ export function createOCR(element) {
             })
             .then(result => {
                 console.log(result)
-                status.innerHTML = "Ready."
-                logBox.insertAdjacentHTML('beforeend', `<p class="confidence">Confidence: ${result.data.confidence}</p>`)
-                logBox.insertAdjacentHTML('beforeend', `<p class="result">Result: <br>${result.data.text}</p>`)
-
+                status.innerHTML = "Ready. " + `${result.data.words.length} word(s) and ${result.data.symbols.length} symbol(s) recognised.`
+                logBox.insertAdjacentHTML('beforeend', `<div class="confidence"><h3>Overall confidence:</h3><p>${result.data.confidence} out of 100.</p></div>`)
+                logBox.insertAdjacentHTML('beforeend', `<div class="result"><h3>Result:</h3><p>${result.data.text}</p></div>`)
             })
 
     })
 
 }
-
-
 
 
