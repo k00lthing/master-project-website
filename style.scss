@@ -58,7 +58,6 @@ h2 {
 main {
     display: grid;
     grid-template-columns: 1fr;
-    justify-items: start;
     align-items: stretch;
     padding: 2rem;
     margin-top: 10rem;
@@ -71,21 +70,24 @@ main.landing {
     height: 100dvh;
     gap: 10px;
 
-     article {
+    article {
         display: flex;
         justify-content: center;
         align-items: center;
-    
+
         a {
             color: black;
             text-decoration: none;
-          }
+        }
     }
 }
 
 .three-col {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    gap: 1em;
+    margin-bottom: 2rem;
 }
 
 
@@ -150,16 +152,7 @@ input[type="file"] {
     color: black;
 }
 
-// Scaffolding OCR system
-
-.tesseract-input {
-    background-color: hsla(200, 100%, 50%, 0.5);
-
-}
-
 #log {
-    background-color: hsla(100, 100%, 50%, 0.5);
-
 
     .progress,
     .status {

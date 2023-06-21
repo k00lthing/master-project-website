@@ -9,8 +9,8 @@ export function createOCR(element) {
 
     element.insertAdjacentHTML('beforeend',
         `
-        <h2>Upload an image with text</h2>
         <div class="tesseract-input">
+        <h2>Upload an image with text</h2>
     <select id="lang">
         <option value='eng' selected> English </option>
         <option value='deu'> German </option>
