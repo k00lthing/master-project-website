@@ -1,13 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resolution</title>
-  </head>
-  <body>
-    <h1>Resolution Page</h1>
-    <script type="module" src="/resolution/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resolution</title>
+</head>
+
+<body>
+  <main>
+    <section class="intro">
+      <div class="description">
+        <h1>Resolution Display VF</h1>
+        <p clas="subline">all caps</p>
+        <p>...</p>
+        <p>...</p>
+        <p>...</p>
+      </div>
+      <div class="inspiration-collage">
+        <p>...</p>
+      </div>
+    </section>
+    <section class="font-demo">
+      <form action="" class="font-controls">
+        <fieldset class="demo-controls-text">
+          <legend>Select the content</legend>
+          <input type="button" value="Placeholder paragraph">
+          <input type="button" value="Pangram">
+          <label for="demo-text">Your Text:</label>
+          <input type="text" autocomplete="off" name="demo-text" id="demo-text-input">
+        </fieldset>
+        <fieldset class="demo-controls-size">
+          <legend>Select font size</legend>
+          <label for="demo-font-size-dropdown">Select preset:</label>
+          <select name="demo-font-size" id="demo-font-size-dropdown">
+            <option value="">--Please choose an option--</option>
+            <option value="8">8px</option>
+            <option value="10">10px</option>
+            <option value="12">12px</option>
+            <option value="16">16px</option>
+            <option value="24">24px</option>
+          </select>
+          <label for="demo-font-size-dropdown">Set custom font size value:</label>
+          <input type="number" min="1" max="200" name="demo-font-size" id="demo-font-size-custom">
+        </fieldset>
+  
+        <label for="demo-axis">Resolution axis: </label>
+        <input type="range" min="100" max="900" value="600" name="demo-axis" id="demo-axis">
+        <input type="reset" value="Reset">
+      </form>
+      <div class="demo-result"></div>
+    </div>
+    <section class="character-set"></section>
+    <section class="ocr-test"></section>
+    <section class="download"></section>
+  </main>
+  <script type="module" src="/resolution/main.js"></script>
+</body>
+
 </html>
