@@ -22,18 +22,20 @@
         <p>...</p>
       </div>
     </section>
+    <section class="character-set"></section>
+    <section class="ocr-test"></section>
     <section class="font-demo">
       <form action="" class="font-controls">
         <fieldset class="demo-controls-text">
           <legend>Select the content</legend>
-          <input type="button" value="Placeholder paragraph">
-          <input type="button" value="Pangram">
-          <label for="demo-text">Your Text:</label>
-          <input type="text" autocomplete="off" name="demo-text" id="demo-text-input">
+          <input type="button" name="placeholder" id="placeholder" value="Random Raragraph">
+          <input type="button" name="pangram" id="pangram" value="Random Pangram">
+          <label for="demo-text-input">Your Text:</label>
+          <textarea id="demo-text-input" name="demo-text"></textarea>
         </fieldset>
         <fieldset class="demo-controls-size">
           <legend>Select font size</legend>
-          <label for="demo-font-size-dropdown">Select preset:</label>
+          <label for="demo-font-size-dropdown">Select preset</label>
           <select name="demo-font-size" id="demo-font-size-dropdown">
             <option value="">--Please choose an option--</option>
             <option value="8">8px</option>
@@ -42,19 +44,19 @@
             <option value="16">16px</option>
             <option value="24">24px</option>
           </select>
-          <label for="demo-font-size-dropdown">Set custom font size value:</label>
+          <label for="demo-font-size-dropdown">...or set a custom font size value (in px):</label>
           <input type="number" min="1" max="200" name="demo-font-size" id="demo-font-size-custom">
         </fieldset>
-  
         <label for="demo-axis">Resolution axis: </label>
-        <input type="range" min="100" max="900" value="600" name="demo-axis" id="demo-axis">
+        <input type="range" min="800" max="900" value="800" name="demo-axis" id="demo-axis">
         <input type="reset" value="Reset">
       </form>
-      <div class="demo-result"></div>
-    </div>
-    <section class="character-set"></section>
-    <section class="ocr-test"></section>
-    <section class="download"></section>
+      <div class="demo-result resolution">Let all these things just sort of happen.</div>
+    </section>
+    <section class="download">
+      <h2>Take Resolution Display for a spin!</h2>
+      <a href="../fonts/Resolution/ResolutionDisplayVF.ttf" title="Download Resolution Display VF">Download</a>
+    </section>
   </main>
   <script type="module" src="/resolution/main.js"></script>
 </body>
