@@ -12,10 +12,12 @@ export function createOCR(element) {
         <div class="tesseract-input">
             <h2>OCR Testing Environment</h2>
             <p>Select language and image with text to recognize.</p>
+            <div class="select-wrapper">
             <select id="lang">
                 <option value='eng' selected> English </option>
                 <option value='deu'> German </option>
             </select>
+            </div>
             <input type="file" id="file-img" accept="image/jpg, image/png, image/bmp, image/pbm" />
             <img id="selected-image" src="" />
             <button class="primary" id="start-ocr">Recognize text</button>

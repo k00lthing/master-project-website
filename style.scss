@@ -178,14 +178,41 @@ button.secondary {
     border: 1px solid black;
 }
 
-select,
-input[type="file"] {
+select {
     font-family: inherit;
-    padding: .5rem;
-    background-color: transparent;
-    border: 1px solid black;
-    color: black;
+    padding-inline: 1em 2em;
+    padding-block: 1em;
+    background-color: black;
+    color: var(--off-white);
+    appearance: none;
+    border: none;
 }
+
+.select-wrapper {
+    position: relative;
+    display:inline-block;
+  }
+  
+  .select-wrapper::after {
+    content: "↓";
+    font-size: 1rem;
+    top: .5rem;
+    right: .5rem;
+    position: absolute;
+    color: var(--off-white);
+  }
+
+input[type="file"]::file-selector-button {
+    font-family: 'Anonymous Pro Regular', monospace!important;
+    font-size: inherit;
+    font-weight: inherit;
+    padding-inline: 1em;
+    padding-block: 1em;
+    border: none;
+    background: black;
+    color: var(--off-white);
+}
+
 
 #log {
     .progress,
