@@ -16,6 +16,7 @@
 
 :root {
     --resolution-font-axis: 800; 
+    
     font-family: 'Anonymous Pro Regular', monospace;
     line-height: 1.5;
     font-weight: 400;
@@ -165,9 +166,16 @@ nav {
 button {
     font-family: inherit;
     padding: 1rem;
+}
+button.primary {
     background-color: black;
     color: white;
     border: none;
+}
+button.secondary {
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
 }
 
 select,

@@ -18,7 +18,7 @@ export function createOCR(element) {
             </select>
             <input type="file" id="file-img" accept="image/jpg, image/png, image/bmp, image/pbm" />
             <img id="selected-image" src="" />
-            <button id="start-ocr">Recognize text</button>
+            <button class="primary" id="start-ocr">Recognize text</button>
             <button class="secondary" id="reset-ocr">Reset</button>
         </div>
         <div id="log" class="tesseract-results">
