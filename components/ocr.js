@@ -19,6 +19,7 @@ export function createOCR(element) {
             <input type="file" id="file-img" accept="image/jpg, image/png, image/bmp, image/pbm" />
             <img id="selected-image" src="" />
             <button id="start-ocr">Recognize text</button>
+            <button class="secondary" id="reset-ocr">Reset</button>
         </div>
         <div id="log" class="tesseract-results">
             <p class="progress"></p>
@@ -26,7 +27,8 @@ export function createOCR(element) {
         </div>
     `)
 
-    const button = document.querySelector("#start-ocr")
+    const startButton = document.querySelector("#start-ocr")
+    const resetButton = document.querySelector("#reset-ocr")
     const langSelector = document.querySelector('#lang')
     const imgSelector = document.querySelector('#file-img')
     const imgPreview = document.querySelector('#selected-image')
@@ -46,7 +48,9 @@ export function createOCR(element) {
 
     }
 
-    button.addEventListener('click', (event) => {
+    startButton.addEventListener('click', (event) => {
+
+        if (!image) return
 
         Tesseract.recognize(
             image, langSelector.value,
@@ -66,6 +70,15 @@ export function createOCR(element) {
                 logBox.insertAdjacentHTML('beforeend', `<div class="confidence"><h3>Overall confidence:</h3><p>${result.data.confidence} out of 100.</p></div>`)
                 logBox.insertAdjacentHTML('beforeend', `<div class="result"><h3>Result:</h3><p>${result.data.text}</p></div>`)
             })
+
+    })
+
+    resetButton.addEventListener('click', (event) => {
+        image = null
+        imgPreview.src = ""
+        progress.innerHTML = ""
+        status.innerHTML = ""
+        logBox.querySelectorAll('div').forEach(e => e.remove())
 
     })
 
