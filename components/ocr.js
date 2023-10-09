@@ -34,7 +34,7 @@ export function createOCR(element) {
     const imgPreview = document.querySelector('#selected-image')
     const logBox = document.querySelector('#log')
     const progress = logBox.querySelector('.progress')
-    const status =  logBox.querySelector('.status')
+    const status = logBox.querySelector('.status')
 
     let image = null
 
@@ -43,7 +43,7 @@ export function createOCR(element) {
     function handleFiles() {
         const fileList = this.files /* now you can work with the file list */
         image = fileList[0]
-        const objectURL = window.URL.createObjectURL(fileList[0]) 
+        const objectURL = window.URL.createObjectURL(fileList[0])
         imgPreview.src = objectURL
 
     }
@@ -51,6 +51,7 @@ export function createOCR(element) {
     startButton.addEventListener('click', (event) => {
 
         if (!image) return
+        resetLog()
 
         Tesseract.recognize(
             image, langSelector.value,
@@ -73,12 +74,17 @@ export function createOCR(element) {
 
     })
 
-    resetButton.addEventListener('click', (event) => {
-        image = null
-        imgPreview.src = ""
+    function resetLog() {
         progress.innerHTML = ""
         status.innerHTML = ""
         logBox.querySelectorAll('div').forEach(e => e.remove())
+    }
+
+    resetButton.addEventListener('click', (event) => {
+        image = null
+        imgSelector.value = null
+        imgPreview.src = ""
+        resetLog()
 
     })
 
