@@ -10,22 +10,183 @@
 
 <body>
   <main>
-    <section class="intro">
+    <h1>Resolution Display Variable Font</h1>
+    <p clas="subline">all-caps heavy display font</p>
+    <h2>Concept</h2>
+    <section class="info">
       <div class="description">
-        <h1>Resolution Display VF</h1>
-        <p clas="subline">all caps</p>
-        <p>...</p>
-        <p>...</p>
-        <p>...</p>
+        <p>Inspired by Hito Steuerl’s aspiration to be(come) invisible through occupying the low-resolution spaces
+          (less-than-a pixel) this strategy utilises basic rectangular shape of a pixel (1:1 rectangle) to 'hide' the
+          glyphs from the OCR software.</p>
+        <a
+          href="https://web.archive.org/web/20210316160332/https://www.artforum.com/video/hito-steyerl-how-not-to-be-seen-a-fucking-didactic-educational-mov-file-2013-51651">How
+          Not to be Seen: A Fucking Didactic Educational .MOV File About the Film @ Rhizome )</a>
+        <p>Barry Spencer’s <em>Blank Typeface</em> also explored the legibility of letterforms, devoid of recognisable
+          characteristics. </p>
+        <p>Among being “invisible” and devoid of distinct letterforms characteristics the rectangular shape also bears
+          the reference to censorship. Christine Rudi's master's thesis explored how information is restricted, banned,
+          made unrecognisable, and inaccessible. To visualise these practices, she designed the font Index Mono, which
+          combines the two extremes of censorship - blackening and disappearance. Thus, the variable font can be bolded
+          beyond recognition or virtually disappear. Pixel Typewriter Font refers to pixelation in digital space as well
+          as to the typewriter as a political instrument used to produce banned literature.</p>
       </div>
       <div class="inspiration-collage">
         <p>...</p>
       </div>
     </section>
-    <section class="character-set"></section>
-    <section class="ocr-test"></section>
+    <h2>Character Set</h2>
+    <section class="character-set resolution">
+      <div class="letters">
+        <div class="letter">
+          A
+          <span>U+0041</span>
+        </div>
+        <div class="letter">
+          B
+          <span>U+0042</span>
+        </div>
+        <div class="letter">
+          C
+          <span>U+0043</span>
+        </div>
+        <div class="letter">
+          D
+          <span>U+0044</span>
+        </div>
+        <div class="letter">
+          E
+          <span>U+0045</span>
+        </div>
+        <div class="letter">
+          F
+          <span>U+0046</span>
+        </div>
+        <div class="letter">
+          G
+          <span>U+0047</span>
+        </div>
+        <div class="letter">
+          H
+          <span>U+0048</span>
+        </div>
+        <div class="letter">
+          I
+          <span>U+0049</span>
+        </div>
+        <div class="letter">
+          J
+          <span>U+004A</span>
+        </div>
+        <div class="letter">
+          K
+          <span>U+004B</span>
+        </div>
+        <div class="letter">
+          L
+          <span>U+004C</span>
+        </div>
+        <div class="letter">
+          M
+          <span>U+004D</span>
+        </div>
+        <div class="letter">
+          N
+          <span>U+004E</span>
+        </div>
+        <div class="letter">
+          O
+          <span>U+004F</span>
+        </div>
+        <div class="letter">
+          P
+          <span>U+0050</span>
+        </div>
+        <div class="letter">
+          Q
+          <span>U+0051</span>
+        </div>
+        <div class="letter">
+          R
+          <span>U+0052</span>
+        </div>
+        <div class="letter">
+          S
+          <span>U+0053</span>
+        </div>
+        <div class="letter">
+          T
+          <span>U+0054</span>
+        </div>
+        <div class="letter">
+          U
+          <span>U+0055</span>
+        </div>
+        <div class="letter">
+          V
+          <span>U+0056</span>
+        </div>
+        <div class="letter">
+          W
+          <span>U+0057</span>
+        </div>
+        <div class="letter">
+          X
+          <span>U+0058</span>
+        </div>
+        <div class="letter">
+          Y
+          <span>U+0059</span>
+        </div>
+        <div class="letter">
+          Z
+          <span>U+005A</span>
+        </div>
+        <div class="letter">
+          0
+          <span>U+005A</span>
+        </div>
+        <div class="letter">
+          1
+          <span>U+005A</span>
+        </div>
+        <div class="letter">
+          2
+          <span>U+005A</span>
+        </div>
+        <div class="letter">
+          3
+          <span>U+005A</span>
+        </div>
+        <div class="letter">
+          4
+          <span>U+005A</span>
+        </div>
+        <div class="letter">
+          5
+          <span>U+005A</span>
+        </div>
+        <div class="letter">
+          6
+          <span>U+005A</span>
+        </div>
+        <div class="letter">
+          7
+          <span>U+005A</span>
+        </div>
+        <div class="letter">
+          8
+          <span>U+005A</span>
+        </div>
+        <div class="letter">
+          9
+          <span>U+005A</span>
+        </div>
+      </div>
+    </section>
     <section class="font-demo">
       <form action="" class="font-controls">
+        <label for="demo-axis">Resolution axis: </label>
+        <input type="range" min="800" max="900" value="800" name="demo-axis" id="demo-axis">
         <fieldset class="demo-controls-text">
           <legend>Select the content</legend>
           <input type="button" name="placeholder" id="placeholder" value="Random Raragraph">
@@ -38,21 +199,20 @@
           <label for="demo-font-size-dropdown">Select preset</label>
           <select name="demo-font-size" id="demo-font-size-dropdown">
             <option value="">--Please choose an option--</option>
-            <option value="8">8px</option>
             <option value="10">10px</option>
             <option value="12">12px</option>
             <option value="16">16px</option>
             <option value="24">24px</option>
+            <option value="28">28px</option>
           </select>
           <label for="demo-font-size-dropdown">...or set a custom font size value (in px):</label>
           <input type="number" min="1" max="200" name="demo-font-size" id="demo-font-size-custom">
         </fieldset>
-        <label for="demo-axis">Resolution axis: </label>
-        <input type="range" min="800" max="900" value="800" name="demo-axis" id="demo-axis">
-        <input type="reset" value="Reset">
+        <button class="secondary invert" type="reset">Reset</button>
       </form>
       <div class="demo-result resolution">Let all these things just sort of happen.</div>
     </section>
+    <section class="ocr-test"></section>
     <section class="download">
       <h2>Take Resolution Display for a spin!</h2>
       <a href="../fonts/Resolution/ResolutionDisplayVF.ttf" title="Download Resolution Display VF">Download</a>
