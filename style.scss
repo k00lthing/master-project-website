@@ -189,7 +189,7 @@ main {
         column-count: 3;
     }
 
-    a {
+    p + a {
         text-underline-offset: .5rem;
 
         &::after {
@@ -234,6 +234,9 @@ form.font-controls {
     color: white;
     padding: 1em;
     margin-block-start: 1.5rem;
+    * {
+        margin: 1rem 0;
+    }
 }
 
 select {
@@ -412,3 +415,4 @@ input[type=range] {
   input[type=range]:focus::-ms-fill-upper {
     background: #FFFFFF;
   }
+  
