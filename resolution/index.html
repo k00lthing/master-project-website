@@ -185,8 +185,9 @@
     </section>
     <section class="font-demo">
       <form action="" class="font-controls" onsubmit="return false">
-        <label for="demo-axis">Resolution axis: </label>
-        <input type="range" min="800" max="900" value="800" name="demo-axis" id="demo-axis">
+        <label for="demo-axis">Resolution axis (wght): </label>
+        <output></output>
+        <input type="range" min="800" max="900" value="800" name="demo-axis" id="demo-axis" oninput="this.previousElementSibling.value = this.value">
         <fieldset class="demo-controls-text">
           <legend>Select the content</legend>
           <input type="button" name="placeholder" id="placeholder" value="Random Raragraph">
