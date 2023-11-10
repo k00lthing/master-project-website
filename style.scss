@@ -420,3 +420,16 @@ input[type=range] {
     background: #FFFFFF;
   }
   
+  input[type="button"] {
+    background: white;
+    border: 1px solid white;
+    padding: 1rem;
+    color: black;
+}
+
+fieldset{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
