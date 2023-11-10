@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preload" as="font" href="/fonts/RESIN/RESIN-Regular.ttf">
+  <link rel="preload" as="font" href="/fonts/Rubik/Rubik-VariableFont_wght.ttf">
+  <link rel="preload" as="font" href="/fonts/Resolution/ResolutionDisplayVF.ttf">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resolution</title>
 </head>
@@ -187,37 +190,40 @@
       <form action="" class="font-controls" onsubmit="return false">
         <label for="demo-axis">Resolution axis (wght): </label>
         <output></output>
-        <input type="range" min="800" max="900" value="800" name="demo-axis" id="demo-axis" oninput="this.previousElementSibling.value = this.value">
+        <input type="range" min="800" max="900" value="800" name="demo-axis" id="demo-axis"
+          oninput="this.previousElementSibling.value = this.value">
         <fieldset class="demo-controls-text">
           <legend>Select the content</legend>
           <input type="button" name="placeholder" id="placeholder" value="Random Raragraph">
           <input type="button" name="pangram" id="pangram" value="Random Pangram">
           <label for="demo-text-input">Custom text:</label>
-          <input  type="text" id="demo-text-input" name="demo-text">
+          <input type="text" id="demo-text-input" name="demo-text">
         </fieldset>
         <fieldset class="demo-controls-size">
           <legend>Select font size</legend>
           <label for="demo-font-size-dropdown">Select preset</label>
-          <select name="demo-font-size" id="demo-font-size-dropdown">
-            <option value="">--Please choose an option--</option>
-            <option value="10">10px</option>
-            <option value="12">12px</option>
-            <option value="16">16px</option>
-            <option value="24">24px</option>
-            <option value="28">28px</option>
-            <option value="30">30px</option>
-            <option value="32">32px</option>
-            <option value="34">34px</option>
-            <option value="38">38px</option>
-            <option value="40">40px</option>
-            <option value="42">42px</option>
-            <option value="46">46px</option>
-            <option value="48">48px</option>
-            <option value="50">50px</option>
-            <option value="52">52px</option>
-            <option value="54">54px</option>
-            <option value="58">58px</option>
-          </select>
+          <div class="select-wrapper">
+            <select name="demo-font-size" id="demo-font-size-dropdown">
+              <option value="">--Please choose an option--</option>
+              <option value="10">10px</option>
+              <option value="12">12px</option>
+              <option value="16">16px</option>
+              <option value="24">24px</option>
+              <option value="28">28px</option>
+              <option value="30">30px</option>
+              <option value="32">32px</option>
+              <option value="34">34px</option>
+              <option value="38">38px</option>
+              <option value="40">40px</option>
+              <option value="42">42px</option>
+              <option value="46">46px</option>
+              <option value="48">48px</option>
+              <option value="50">50px</option>
+              <option value="52">52px</option>
+              <option value="54">54px</option>
+              <option value="58">58px</option>
+            </select>
+          </div>
           <label for="demo-font-size-custom">...or set a custom font size value (in px):</label>
           <input type="number" min="10" max="200" name="demo-font-size" id="demo-font-size-custom">
         </fieldset>
@@ -231,7 +237,7 @@
       <a href="../fonts/Resolution/ResolutionDisplayVF.ttf" title="Download Resolution Display VF">Download</a>
     </section>
   </main>
-  <script type="module" src="/resolution/main.js"></script>
+  <script async type="module" src="/resolution/main.js"></script>
 </body>
 
 </html>
