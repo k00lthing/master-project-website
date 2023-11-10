@@ -241,6 +241,15 @@ form.font-controls {
     * {
         margin: 1rem 0;
     }
+
+    select{
+        border: 1px solid white;
+    }
+
+    input[type="number"] {
+        background: black;
+        padding: 1em;
+    }
 }
 
 select {
