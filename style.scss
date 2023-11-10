@@ -2,21 +2,25 @@
     font-family: 'Resin';
     src: url('./fonts/RESIN/RESIN-Regular.ttf') format('ttf'),
         url('./fonts/RESIN/RESIN-Regular.woff') format('woff');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Rubik';
     src: url('./fonts/Rubik/Rubik-VariableFont_wght.ttf');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Rubik Italic';
     src: url('./fonts/Rubik/Rubik-Italic-VariableFont_wght.ttf');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Resolution VF';
     src: url('./fonts/Resolution/ResolutionDisplayVF.ttf');
+    font-display: swap;
 }
 
 :root {
