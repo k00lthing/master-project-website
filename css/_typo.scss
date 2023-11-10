@@ -1,0 +1,43 @@
+@use 'css/variables';
+
+h1 {
+    font-family: 'Resin', Helvetica, sans-serif;
+    margin-block-end: 1rem;
+}
+
+h2 {
+    font-variation-settings: 'wght' 500;
+}
+
+h3 {
+    font-variation-settings: 'wght' 450;
+}
+
+*.hyphenate {
+    hyphens: auto;
+
+}
+
+strong {
+    font-variation-settings: 'wght' 500;
+}
+
+em {
+    font-family: 'Rubik Italic';
+}
+
+a {
+    color: variables.$off-black;
+}
+
+h1, h2, h3, p {
+    margin-block-start: 0;
+}
+
+
+.resolution {
+    font-family: 'Resolution VF';
+    font-variation-settings: 'wght' var(--resolution-font-axis);
+    font-size: 5rem;
+    line-height: 1;
+}

@@ -1,0 +1,167 @@
+@use 'css/variables';
+
+select {
+    font-family: inherit;
+    padding-inline: 1em 2em;
+    padding-block: 1em;
+    background-color: variables.$off-black;
+    color: variables.$off-white;
+    appearance: none;
+    border: none;
+}
+
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.select-wrapper::after {
+    content: "↓";
+    font-size: 1rem;
+    top: .5rem;
+    right: .5rem;
+    position: absolute;
+    color: variables.$off-white;
+}
+
+input[type="file"]::file-selector-button {
+    font-family: inherit !important;
+    font-size: inherit;
+    font-weight: inherit;
+    padding-inline: 1em;
+    padding-block: 1em;
+    border: none;
+    background: variables.$off-black;
+    color: variables.$off-white;
+}
+
+input[type=range] {
+    height: 1px;
+    -webkit-appearance: none;
+    margin: 0;
+    width: 100%;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: none;
+    background: variables.$off-white;
+    border-radius: 0px;
+    border: none;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: none;
+    border: 1px solid variables.$off-black;
+    height: 30px;
+    width: 10px;
+    border-radius: 0px;
+    background: variables.$off-white;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -17.5px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: variables.$off-white;
+  }
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px variables.$off-black;
+    background: variables.$off-white;
+    border-radius: 0px;
+    border: 0px solid variables.$off-black;
+  }
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px variables.$off-black;
+    border: 1px solid variables.$off-black;
+    height: 35px;
+    width: 10px;
+    border-radius: 0px;
+    background: variables.$off-white;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: variables.$off-white;
+    border: 0px solid variables.$off-black;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px variables.$off-black;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: variables.$off-white;
+    border: 0px solid variables.$off-black;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px variables.$off-black;
+  }
+  input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 0px 0px 0px variables.$off-black;
+    border: 1px solid variables.$off-black;
+    height: 35px;
+    width: 10px;
+    border-radius: 0px;
+    background: variables.$off-white;
+    cursor: pointer;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: variables.$off-white;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: variables.$off-white;
+  }
+  
+  input[type="button"] {
+    background: variables.$off-white;
+    border: 1px solid variables.$off-white;
+    padding: 1rem;
+    color: variables.$off-black;
+}
+
+fieldset{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+form.font-controls {
+    background: variables.$off-black;
+    color: variables.$off-white;
+    padding: 1em;
+    margin-block-start: 1.5rem;
+    * {
+        margin: 1rem 0;
+    }
+
+    select{
+        border: 1px solid variables.$off-white;
+    }
+
+    input[type="number"] {
+        background: variables.$off-black;
+        color: variables.$off-white;
+        padding: 1em;
+    }
+
+    .select-wrapper::after {
+      position: absolute;
+      top: 1.7rem;
+      right: .5rem;
+  }
+}

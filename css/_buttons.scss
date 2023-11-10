@@ -1,0 +1,24 @@
+@use 'css/variables';
+
+button {
+    font-family: inherit;
+    padding: 1rem;
+}
+
+button.primary {
+    background-color: variables.$off-black;
+    color: variables.$off-white;
+    border: none;
+}
+
+button.secondary {
+    background-color: transparent;
+    color: variables.$off-black;
+    border: 1px solid variables.$off-black;
+}
+
+button.secondary.invert {
+    background-color: transparent;
+    color: variables.$off-white;
+    border: 1px solid variables.$off-white;
+}

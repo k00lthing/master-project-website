@@ -1,105 +1,22 @@
-@font-face {
-    font-family: 'Resin';
-    src: url('./fonts/RESIN/RESIN-Regular.ttf') format('ttf'),
-        url('./fonts/RESIN/RESIN-Regular.woff') format('woff');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Rubik';
-    src: url('./fonts/Rubik/Rubik-VariableFont_wght.ttf');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Rubik Italic';
-    src: url('./fonts/Rubik/Rubik-Italic-VariableFont_wght.ttf');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Resolution VF';
-    src: url('./fonts/Resolution/ResolutionDisplayVF.ttf');
-    font-display: swap;
-}
+@use 'css/fonts';
+@use 'css/variables';
+@use 'css/base';
+@use 'css/form';
+@use 'css/typo';
+@use 'css/buttons';
 
 :root {
     --resolution-font-axis: 800;
-    --off-white: #f8f8f8;
-
-    color-scheme: light dark;
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%;
-}
-
-::selection{
-    background: black;
-    color: var(--off-white);
-}
-
-body {
-    min-height: 100dvh;
-    padding: 0;
-    margin: 0;
-    font-family: 'Rubik', sans-serif;
-    font-variation-settings: 'wght' 380;
-    line-height: 1.5;
-    color: black;
-    background-color: var(--off-white);
-
-}
-
-h1 {
-    font-family: 'Resin', Helvetica, sans-serif;
-    margin-block-end: 1rem;
-}
-
-h2 {
-    font-variation-settings: 'wght' 500;
-}
-
-h3 {
-    font-variation-settings: 'wght' 450;
-}
-
-*.hyphenate {
-    hyphens: auto;
-
-}
-
-strong {
-    font-variation-settings: 'wght' 500;
-}
-
-em {
-    font-family: 'Rubik italic';
-}
-
-a {
-    color: black;
-}
-
-h1, h2, h3, p {
-    margin-block-start: 0;
-}
-
-
-.resolution {
-    font-family: 'Resolution VF';
-    font-variation-settings: 'wght' var(--resolution-font-axis);
-    font-size: 5rem;
-    line-height: 1;
+	--disruption-font-axis: 0;
+	--disorientation-font-axis: 0;
 }
 
 header {
     max-width: fit-content;
     margin: 0 auto;
     padding: 1em;
-    background-color: black;
-    color: var(--off-white);
+    background-color: variables.$off-black;
+    color: variables.$off-white;
     text-align: center;
 
     h1 {
@@ -116,7 +33,7 @@ nav {
     max-width: 100%;
     margin: 0 auto;
     padding: 1em;
-    background-color: black;
+    background-color: variables.$off-black;
     color: white;
 
     ul {
@@ -174,7 +91,7 @@ main {
             justify-content: center;
             align-items: center;
             padding: 2rem;
-            border: 1px solid black;
+            border: 1px solid variables.$off-black;
 
             &#resolution {}
 
@@ -183,7 +100,7 @@ main {
             &#disorientation {}
 
             a {
-                color: black;
+                color: variables.$off-black;
                 text-decoration: none;
             }
         }
@@ -210,82 +127,6 @@ main {
 }
 
 
-button {
-    font-family: inherit;
-    padding: 1rem;
-}
-
-button.primary {
-    background-color: black;
-    color: var(--off-white);
-    border: none;
-}
-
-button.secondary {
-    background-color: transparent;
-    color: black;
-    border: 1px solid black;
-}
-
-button.secondary.invert {
-    background-color: transparent;
-    color: var(--off-white);
-    border: 1px solid var(--off-white);
-}
-
-form.font-controls {
-    background: black;
-    color: white;
-    padding: 1em;
-    margin-block-start: 1.5rem;
-    * {
-        margin: 1rem 0;
-    }
-
-    select{
-        border: 1px solid white;
-    }
-
-    input[type="number"] {
-        background: black;
-        padding: 1em;
-    }
-}
-
-select {
-    font-family: inherit;
-    padding-inline: 1em 2em;
-    padding-block: 1em;
-    background-color: black;
-    color: var(--off-white);
-    appearance: none;
-    border: none;
-}
-
-.select-wrapper {
-    position: relative;
-    display: inline-block;
-}
-
-.select-wrapper::after {
-    content: "↓";
-    font-size: 1rem;
-    top: .5rem;
-    right: .5rem;
-    position: absolute;
-    color: var(--off-white);
-}
-
-input[type="file"]::file-selector-button {
-    font-family: inherit !important;
-    font-size: inherit;
-    font-weight: inherit;
-    padding-inline: 1em;
-    padding-block: 1em;
-    border: none;
-    background: black;
-    color: var(--off-white);
-}
 
 
 #log {
@@ -316,8 +157,8 @@ input[type="file"]::file-selector-button {
 .letters {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    border-top: 1px solid black;
-    border-left: 1px solid black;
+    border-top: 1px solid variables.$off-black;
+    border-left: 1px solid variables.$off-black;
 }
 
 .letter {
@@ -326,8 +167,8 @@ input[type="file"]::file-selector-button {
     justify-content: space-between;
     align-items: center;
     gap: .5rem;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
+    border-bottom: 1px solid variables.$off-black;
+    border-right: 1px solid variables.$off-black;
     padding: 1rem;
     font-size: 6rem;
 
@@ -335,110 +176,6 @@ input[type="file"]::file-selector-button {
         font-size: .8rem;
         font-family: 'Rubik', sans-serif;
         font-variation-settings: 'wght' 380;
-        color: rgb(62, 62, 62);
+        color: variables.$contrast-gray;
     }
-}
-
-input[type=range] {
-    height: 1px;
-    -webkit-appearance: none;
-    margin: 0;
-    width: 100%;
-  }
-  input[type=range]:focus {
-    outline: none;
-  }
-  input[type=range]::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 1px;
-    cursor: pointer;
-    animate: 0.2s;
-    box-shadow: none;
-    background: #FFFFFF;
-    border-radius: 0px;
-    border: none;
-  }
-  input[type=range]::-webkit-slider-thumb {
-    box-shadow: none;
-    border: 1px solid #000000;
-    height: 30px;
-    width: 10px;
-    border-radius: 0px;
-    background: #FFFFFF;
-    cursor: pointer;
-    -webkit-appearance: none;
-    margin-top: -17.5px;
-  }
-  input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #FFFFFF;
-  }
-  input[type=range]::-moz-range-track {
-    width: 100%;
-    height: 1px;
-    cursor: pointer;
-    animate: 0.2s;
-    box-shadow: 0px 0px 0px #000000;
-    background: #FFFFFF;
-    border-radius: 0px;
-    border: 0px solid #000000;
-  }
-  input[type=range]::-moz-range-thumb {
-    box-shadow: 0px 0px 0px #000000;
-    border: 1px solid #000000;
-    height: 35px;
-    width: 10px;
-    border-radius: 0px;
-    background: #FFFFFF;
-    cursor: pointer;
-  }
-  input[type=range]::-ms-track {
-    width: 100%;
-    height: 1px;
-    cursor: pointer;
-    animate: 0.2s;
-    background: transparent;
-    border-color: transparent;
-    color: transparent;
-  }
-  input[type=range]::-ms-fill-lower {
-    background: #FFFFFF;
-    border: 0px solid #000000;
-    border-radius: 0px;
-    box-shadow: 0px 0px 0px #000000;
-  }
-  input[type=range]::-ms-fill-upper {
-    background: #FFFFFF;
-    border: 0px solid #000000;
-    border-radius: 0px;
-    box-shadow: 0px 0px 0px #000000;
-  }
-  input[type=range]::-ms-thumb {
-    margin-top: 1px;
-    box-shadow: 0px 0px 0px #000000;
-    border: 1px solid #000000;
-    height: 35px;
-    width: 10px;
-    border-radius: 0px;
-    background: #FFFFFF;
-    cursor: pointer;
-  }
-  input[type=range]:focus::-ms-fill-lower {
-    background: #FFFFFF;
-  }
-  input[type=range]:focus::-ms-fill-upper {
-    background: #FFFFFF;
-  }
-  
-  input[type="button"] {
-    background: white;
-    border: 1px solid white;
-    padding: 1rem;
-    color: black;
-}
-
-fieldset{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 2rem;
 }
