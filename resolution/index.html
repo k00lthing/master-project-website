@@ -11,7 +11,7 @@
 <body>
   <main>
     <h1>Resolution Display Variable Font</h1>
-    <p clas="subline">all-caps heavy display font</p>
+    <p class="subline">all-caps heavy display font</p>
     <h2>Concept</h2>
     <section class="info">
       <div class="description">
@@ -184,7 +184,7 @@
       </div>
     </section>
     <section class="font-demo">
-      <form action="" class="font-controls">
+      <form action="" class="font-controls" onsubmit="return false">
         <label for="demo-axis">Resolution axis: </label>
         <input type="range" min="800" max="900" value="800" name="demo-axis" id="demo-axis">
         <fieldset class="demo-controls-text">
@@ -204,9 +204,21 @@
             <option value="16">16px</option>
             <option value="24">24px</option>
             <option value="28">28px</option>
+            <option value="30">30px</option>
+            <option value="32">32px</option>
+            <option value="34">34px</option>
+            <option value="38">38px</option>
+            <option value="40">40px</option>
+            <option value="42">42px</option>
+            <option value="46">46px</option>
+            <option value="48">48px</option>
+            <option value="50">50px</option>
+            <option value="52">52px</option>
+            <option value="54">54px</option>
+            <option value="58">58px</option>
           </select>
           <label for="demo-font-size-dropdown">...or set a custom font size value (in px):</label>
-          <input type="number" min="1" max="200" name="demo-font-size" id="demo-font-size-custom">
+          <input type="number" min="10" max="200" name="demo-font-size" id="demo-font-size-custom">
         </fieldset>
         <button class="secondary invert" type="reset">Reset</button>
       </form>
