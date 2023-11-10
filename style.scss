@@ -268,7 +268,7 @@ select {
 }
 
 input[type="file"]::file-selector-button {
-    font-family: 'Anonymous Pro Regular', monospace !important;
+    font-family: inherit !important;
     font-size: inherit;
     font-weight: inherit;
     padding-inline: 1em;
