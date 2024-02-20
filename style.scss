@@ -60,6 +60,10 @@ main {
     grid-template-columns: 1fr;
     padding: 2rem;
 
+    section {
+        margin-block-end: 2rem;
+    }
+
     &#ocr-env {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto;
