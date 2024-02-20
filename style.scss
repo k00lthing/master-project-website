@@ -179,3 +179,9 @@ main {
         color: variables.$contrast-gray;
     }
 }
+
+.demo-result.resolution {
+    background: white;
+    padding: 1rem;
+    border: 1px solid variables.$off-black;
+}
