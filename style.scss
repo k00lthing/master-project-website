@@ -113,26 +113,37 @@ main {
         margin: 0;
         padding: 2rem;
         justify-items: inherit;
-        gap: 1rem;
+        gap: 2rem;
 
         article {
+            position: relative;
+            overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 2rem;
-            border: 1px solid variables.$off-black;
+            min-height: 60dvh;
+            max-width: 100%;
 
-            &#resolution {}
-
-            &#disruption {}
-
-            &#disorientation {}
-
+            img.background-img {
+                opacity: 0.6;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: auto;
+            }
             a {
-                color: variables.$off-black;
+                color: variables.$off-white;
                 text-decoration: none;
+                position: relative;
+            }
+            h2 {
+                background: variables.$off-black;
+                padding: 0 .5rem;
             }
         }
+
     }
 
 
