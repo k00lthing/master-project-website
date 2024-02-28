@@ -4,6 +4,9 @@
 @use 'css/form';
 @use 'css/typo';
 @use 'css/buttons';
+@use 'css/slider';
+
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
 
 :root {
     --resolution-font-axis: 800;

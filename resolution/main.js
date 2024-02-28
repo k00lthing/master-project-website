@@ -1,10 +1,17 @@
 import '../style.scss'
 import { createHeader } from '../components/header.js'
 import { createNav } from '../components/navigation.js'
+import { createLightbox } from '../components/lightbox.js'
+import Glide from '@glidejs/glide'
 
 createHeader(document.querySelector('body'))
 createNav(document.querySelector('body'))
-   
+
+new Glide('.glide.concept').mount()
+new Glide('.glide.test').mount()
+
+createLightbox(document.querySelector('body'))
+
 const root = document.documentElement;
 const form = document.querySelector("form.font-controls");
 const textInput = document.querySelector("#demo-text-input");
