@@ -146,6 +146,7 @@ input[type="button"] {
 
 fieldset {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
   gap: 2rem;
@@ -156,7 +157,7 @@ fieldset {
 form.font-controls {
   background: variables.$off-black;
   color: variables.$off-white;
-  padding: 1em;
+  padding: .5em;
   margin-block-start: 1.5rem;
 
   * {
