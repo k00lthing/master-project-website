@@ -7,10 +7,12 @@ h1 {
 
 h2 {
     font-variation-settings: 'wght' 500;
+    font-size: 3rem;
 }
 
 h3 {
     font-variation-settings: 'wght' 450;
+    font-size: 2rem;
 }
 
 *.hyphenate {
@@ -32,8 +34,11 @@ a {
 
 h1, h2, h3, p {
     margin-block-start: 0;
+    margin-block-end: .5rem;
 }
-
+p.subline {
+    margin-block-end: 2rem;
+}
 
 .resolution {
     font-family: 'Resolution VF';
