@@ -9,8 +9,8 @@ export function createOCR(element) {
 
     element.insertAdjacentHTML('afterbegin',
         `
+        <h2>OCR Testing Environment</h2>
         <div class="tesseract-input">
-            <h2>OCR Testing Environment</h2>
             <p>Select language and image with text to recognize.</p>
             <div class="select-wrapper">
             <select id="lang">
