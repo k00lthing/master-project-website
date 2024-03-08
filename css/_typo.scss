@@ -15,6 +15,10 @@ h3 {
     font-size: 2rem;
 }
 
+h4 {
+    font-variation-settings: 'wght' 500;
+}
+
 *.hyphenate {
     hyphens: auto;
 
@@ -38,6 +42,7 @@ h1, h2, h3, p {
 }
 p.subline {
     margin-block-end: 2rem;
+    color: variables.$contrast-gray;
 }
 
 .resolution {
