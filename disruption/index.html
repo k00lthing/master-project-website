@@ -7,17 +7,20 @@
   <link rel="preload" as="font" href="/fonts/RESIN/RESIN-Regular.ttf">
   <link rel="preload" as="font" href="/fonts/Rubik/Rubik-VariableFont_wght.ttf">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Disruption</title>
+  <title>Disruption Monospace Variable Font</title>
 </head>
 
 <body>
   <main>
     <h2>Disruption Monospace Variable Font</h2>
-    <p class="subline">subline</p>
+    <p class="subline">monospaced capitals and small capitals only typeface</p>
     <section class="info">
       <h3>Concept</h3>
       <div class="description">
-        <p>concept here</p>
+        <p>In the early 20th century, Gestalt psychologists Max Wertheimer, Kurt Koffka, and Wolfgang Kohler developed a set of principles aimed at describing how people visually perceive and organise the world. These principles are commonly referred to as Gestalt Laws or the Gestalt Principles. Graphic designers embraced Gestalt Principles in order to create aesthetically pleasing designs with well-placed elements. There are more than 10 overlapping principles, but the most popular principles include proximity, similarity, common regions, and closure.</p>
+        <p>The typeface design of Disruption Monospace VF utilises the principle of closure (Reification) in visual design, which states that human minds prefer complete shapes, so we automatically fill the gaps between elements to perceive a complete image. This principle is often used in logo design, where designers use negative space to create a shape that is not actually there.</p>
+        <p>As a first step, I designed a monospaced typeface, consisting of capitals, small capitals for lowercase letters and a set of numbers, which is a base for the application of the principle of closure. The idea is rather straightforward — to remove or hide parts of the glyph in order to interrupt the familiar shape of the letter, making it harder for OCR software to make a match in full confidence. Next step — introduce a “disruptor”, which will become more present along the variation axis. The first iteration included horizontal rectangular shapes, placed along the vertical grid of 10 subdivisions from baseline to capital height of a glyph. Hoverer, this type of disruption in the letterform didn't prove effective, OCR software had little problem ignoring it and correctly recognising letter shapes. The final iteration introduced rectangular disruptors placed diagonally with starting and ending points aligned to the width of the glyph, as well as a 20-step subdivision grid on a glyph height. </p>
+        <p>Another important thing to consider in the process of typeface design is: where to place the “disruptor”? To approach this issue methodically, I considered the work of <a href="https://erikbern.com/2016/01/21/analyzing-50k-fonts-using-deep-neural-networks.html" target="_blank">Erik Bernhardsson</a>, who analysed 50 000 fonts using deep neural networks. As one of the many steps, he compiled a tensor of all the processed fonts and rendered a median value of all the fonts. In a sense, this image answers the question of what part of the letter defines a particular letter across different typefaces. This way I decided to try to place the “disruptor” close to the darkest area on the median image (e.g. in the letter 'N' start and end of the diagonal stroke). The result of this experiment is a monospaced variable font, consisting of 64 glyphs, every single of them interrupted with 1-2 “disruptors”, whose size is changing along the axis of variation.</p>
       </div>
       <div class="images">
         <div class="glide concept">
