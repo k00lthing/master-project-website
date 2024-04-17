@@ -17,7 +17,56 @@
     <section class="info">
       <h3>Concept</h3>
       <div class="description">
-        <p>text here</p>
+        <p class="hyphenate">This strategy falls in the footsteps of one of the implementation intended to separate bots
+          from humans — the CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart), which
+          was created at Carnegie Mellon University in 2000. Since then, a lot of websites use different forms of
+          CAPTCHAs to guard against the spambots and other malicious software implementations. Classic CAPTCHAs, which
+          are still in use on some web properties today, involve asking users to identify letters. The letters are
+          distorted so that bots are not likely to be able to identify them. Such tests are rather common in
+          login/signup forms, online polls, and e-commerce checkout pages.</p>
+
+        <p class="hyphenate">Similar to Disruption Monospace VF, I started with drawing a neutral sans-serif font, which
+          will be used as a base for this typographic experiment. For this typeface, I wanted to create a more ‘erratic’
+          look, utilising OpenType glyph replacement features: ligatures and contextual alternatives.</p>
+
+        <p class="hyphenate">Next, a very big decision was to be made — what letter combinations will become ligatures
+          and what letters should get contextual alternatives? As a starting point, I had a look at something, some
+          German-speaking typographers call “schnapps-words” (named so as a tribute to double-vision one gets from
+          indulging a bit too much alcohol) case, when a word contains double letters, like ‘buggy’ or ‘missing’. But it
+          is a minor deviation in a sentence, since “schnapps-words” are not very common.</p>
+        <p class="hyphenate">Cryptography researchers of the University of Notre Dame published statistics of <a
+            href="https://www3.nd.edu/~busiforc/handouts/cryptography/Letter%20Frequencies.html#Most_common_bigrams_.28in_order.29"
+            target="_blank">letter frequencies in the English language</a>. The analysis of 9,481 English works from
+          Project Gutenberg (plain text files only, minus the human genome project, non-English works, and duplicates)
+          yielded frequencies of letters, bigrams, trigrams and quadrigrams. Of 2,383,373,483 bigrams scanned
+          researchers ranked 20 most frequent, which I took as a second set of ligatures.</p>
+
+        <p class="hyphenate">Disruption Monospace VF is drafted as a variable font with two axes of variation —
+          horizontal and vertical. All variations are applied to ligatures and contextual alternatives only. For the
+          horizontal variation, I slanted the ligatures slant up or down from 0 to 35°, which gave a visual effect of a
+          glyph, rotated along its own middle axis. Vertical variation shifts the glyph to the point of first intersect
+          with ascender or descender. To make the interpolation work, I needed at least three master drawings — one for
+          no advance, one for max. horizontal advance and one for max. vertical advance.</p>
+
+        <p class="hyphenate">To bring some variation in the substitution process, for each ligature I drew 4 variations
+          and two variations for numerals. Along the horizontal axis, the following variations exist: (1) first letter
+          slanted 35° down, last letter slanted 35° up (2) both letters slanted 35° down (3) both letters slanted 35° up
+          and (4) first letter slanted 35° up, last letter slanted 35° down. Along the vertical axis, the following
+          variations exist: (1)second letter pulled up to align with ascender, (2) first letter pulled up to align with
+          ascender, (3) both letters pulled up to ascender, (4) both letters pulled down to descender.
+        <p>
+
+        <p class="hyphenate">The decision on which glyph used for substitution is being managed by three little “loops”
+          written in the OpenType feature language, making sure no two same ligatures are placed next to each other.
+        <p>
+
+        <p class="hyphenate">Those rules laid a solid base, but I was craving a bit more going on here. So I introduced
+          initial and final forms of the letter — every uppercase letter got 2 variations for initial forms (letter is
+          first one in the word) and every lowercase letter got 2 variations for final forms (letter is last in the
+          word). Which variation to use, depends upon whether the word begins the sentence or used in-between. </p>
+
+        <p class="hyphenate">After synchronising all rules and variations along three masters, the experiment grew up to
+          1137 individual glyphs, which gives the typed sentence its signature eccentric look. </p>
       </div>
       <div class="images">
         <div class="glide concept">
@@ -27,7 +76,8 @@
                 <figure>
                   <img src="/img/disorientation/Disorientation-demo-black-white.png"
                     alt="Disorientation Sans at different variations, shown using phrases 'Displacement', 'Middle Axis Rotation', 'Ant the Combination of Both'" />
-                  <figcaption>Disorientation Sans at different variations, shown using phrases 'Displacement', 'Middle Axis Rotation', 'Ant the Combination of Both'.
+                  <figcaption>Disorientation Sans at different variations, shown using phrases 'Displacement', 'Middle
+                    Axis Rotation', 'Ant the Combination of Both'.
                   </figcaption>
                 </figure>
               </li>
@@ -35,42 +85,69 @@
                 <figure>
                   <img src="/img/disorientation/Disorientatio-Axis-Demo.png"
                     alt="Disorientation Sans VF has two variation axis - for horizontal and vertical advance. This image shows several possible interpolation instences." />
-                  <figcaption>Disorientation Sans VF has two variation axis - for horizontal and vertical advance. This image shows several possible interpolation instences.</figcaption>
+                  <figcaption>Disorientation Sans VF has two variation axis - for horizontal and vertical advance. This
+                    image shows several possible interpolation instences.</figcaption>
                 </figure>
               </li>
               <li class="glide__slide">
                 <figure>
-                  <img src="/img/disorientation/Disorientation Sans Weight Demo rxad white.png"
-                    alt="Disorientation Sans VF glyphs along the horizontal advance axis - from 0 (no advance) to 100
+                  <img src="/img/disorientation/Disorientation Sans Weight Demo rxad white.png" alt="Disorientation Sans VF glyphs along the horizontal advance axis - from 0 (no advance) to 100
                     (max. horizontal advance)" />
-                  <figcaption>Disorientation Sans VF glyphs along the horizontal advance axis - from 0 (no advance) to 100
+                  <figcaption>Disorientation Sans VF glyphs along the horizontal advance axis - from 0 (no advance) to
+                    100
                     (max. horizontal advance)</figcaption>
                 </figure>
               </li>
               <li class="glide__slide">
                 <figure>
-                  <img src="/img/disorientation/Disorientation Sans Weight Demo rxad black.png"
-                    alt="Disorientation Sans VF glyphs along the horizontal advance axis - from 0 (no advance) to 100
+                  <img src="/img/disorientation/Disorientation Sans Weight Demo rxad black.png" alt="Disorientation Sans VF glyphs along the horizontal advance axis - from 0 (no advance) to 100
                     (max. horizontal advance), colors inverted." />
-                  <figcaption>Disorientation Sans VF glyphs along the horizontal advance axis - from 0 (no advance) to 100
+                  <figcaption>Disorientation Sans VF glyphs along the horizontal advance axis - from 0 (no advance) to
+                    100
                     (max. horizontal advance), colors inveted.
                   </figcaption>
                 </figure>
               </li>
               <li class="glide__slide">
                 <figure>
-                  <img src="/img/disruption/disruption-weight-demo-black.png"
-                    alt="Disruption Monospace VF glyphs in 6 different weights - from 600 (regular) to 700 (disrupted), colors inverted." />
-                  <figcaption>Disruption Monospace VF glyphs in 6 different weights - from 600 (regular) to 700
-                    (disrupted), colors
-                    inverted.</figcaption>
+                  <img src="/img/disorientation/Disorientation Sans Weight Demo ryad white.png" alt="Disorientation Sans VF glyphs along the vertical advance axis - from 0 (no advance) to 100
+                    (max. vertical advance)" />
+                  <figcaption>Disorientation Sans VF glyphs along the vertical advance axis - from 0 (no advance) to 100
+                    (max. vertical advance)</figcaption>
                 </figure>
               </li>
               <li class="glide__slide">
                 <figure>
-                  <img src="/img/disruption/disruption-waterfall.png"
-                    alt="Typescale for Disruption Monospace with 20px base and golden ratio 1/2 increments (1.309) scale factor." />
-                  <figcaption>Typescale for Disruption Monospace with 20px base and golden ratio 1/2 increments (1.309)
+                  <img src="/img/disorientation/Disorientation Sans Weight Demo ryad black.png" alt="Disorientation Sans VF glyphs along the vertical advance axis - from 0 (no advance) to 100
+                    (max. vertical advance), colors inverted." />
+                  <figcaption>Disorientation Sans VF glyphs along the vertical advance axis - from 0 (no advance) to 100
+                    (max. vertical advance), colors inverted.</figcaption>
+                </figure>
+              </li>
+              <li class="glide__slide">
+                <figure>
+                  <img src="/img/disorientation/Disorientation Sans rxad100.png" alt="Typescale for Disorientation Sans VF on rxad 100 with 20px base and golden ratio 1/2 increments (1.309)
+                    scale factor." />
+                  <figcaption>Typescale for Disorientation Sans VF on rxad 100 with 20px base and golden ratio 1/2
+                    increments (1.309)
+                    scale factor.</figcaption>
+                </figure>
+              </li>
+              <li class="glide__slide">
+                <figure>
+                  <img src="public/img/disorientation/Disorientation Sans ryad100.png" alt="Typescale for Disorientation Sans VF on ryad 100 with 20px base and golden ratio 1/2 increments (1.309)
+                    scale factor." />
+                  <figcaption>Typescale for Disorientation Sans VF on ryad 100 with 20px base and golden ratio 1/2
+                    increments (1.309)
+                    scale factor.</figcaption>
+                </figure>
+              </li>
+              <li class="glide__slide">
+                <figure>
+                  <img src="/img/disorientation/Disorientation Sans rxad100 ryad100 Waterfall.png"
+                    alt="Typescale for Disorientation Sans VF with 20px base and golden ratio 1/2 increments (1.309) scale factor." />
+                  <figcaption>Typescale for Disorientation Sans VF with 20px base and golden ratio 1/2 increments
+                    (1.309)
                     scale factor.</figcaption>
                 </figure>
               </li>
@@ -85,163 +162,14 @@
         </div>
       </div>
     </section>
-    <section class="character-set">
-      <h3>Character Set</h3>
-      <div class="letters disorientation">
-        <div class="letter">
-          A
-          <span>U+0041</span>
-        </div>
-        <div class="letter">
-          B
-          <span>U+0042</span>
-        </div>
-        <div class="letter">
-          C
-          <span>U+0043</span>
-        </div>
-        <div class="letter">
-          D
-          <span>U+0044</span>
-        </div>
-        <div class="letter">
-          E
-          <span>U+0045</span>
-        </div>
-        <div class="letter">
-          F
-          <span>U+0046</span>
-        </div>
-        <div class="letter">
-          G
-          <span>U+0047</span>
-        </div>
-        <div class="letter">
-          H
-          <span>U+0048</span>
-        </div>
-        <div class="letter">
-          I
-          <span>U+0049</span>
-        </div>
-        <div class="letter">
-          J
-          <span>U+004A</span>
-        </div>
-        <div class="letter">
-          K
-          <span>U+004B</span>
-        </div>
-        <div class="letter">
-          L
-          <span>U+004C</span>
-        </div>
-        <div class="letter">
-          M
-          <span>U+004D</span>
-        </div>
-        <div class="letter">
-          N
-          <span>U+004E</span>
-        </div>
-        <div class="letter">
-          O
-          <span>U+004F</span>
-        </div>
-        <div class="letter">
-          P
-          <span>U+0050</span>
-        </div>
-        <div class="letter">
-          Q
-          <span>U+0051</span>
-        </div>
-        <div class="letter">
-          R
-          <span>U+0052</span>
-        </div>
-        <div class="letter">
-          S
-          <span>U+0053</span>
-        </div>
-        <div class="letter">
-          T
-          <span>U+0054</span>
-        </div>
-        <div class="letter">
-          U
-          <span>U+0055</span>
-        </div>
-        <div class="letter">
-          V
-          <span>U+0056</span>
-        </div>
-        <div class="letter">
-          W
-          <span>U+0057</span>
-        </div>
-        <div class="letter">
-          X
-          <span>U+0058</span>
-        </div>
-        <div class="letter">
-          Y
-          <span>U+0059</span>
-        </div>
-        <div class="letter">
-          Z
-          <span>U+005A</span>
-        </div>
-        <div class="letter">
-          0
-          <span>U+005A</span>
-        </div>
-        <div class="letter">
-          1
-          <span>U+005A</span>
-        </div>
-        <div class="letter">
-          2
-          <span>U+005A</span>
-        </div>
-        <div class="letter">
-          3
-          <span>U+005A</span>
-        </div>
-        <div class="letter">
-          4
-          <span>U+005A</span>
-        </div>
-        <div class="letter">
-          5
-          <span>U+005A</span>
-        </div>
-        <div class="letter">
-          6
-          <span>U+005A</span>
-        </div>
-        <div class="letter">
-          7
-          <span>U+005A</span>
-        </div>
-        <div class="letter">
-          8
-          <span>U+005A</span>
-        </div>
-        <div class="letter">
-          9
-          <span>U+005A</span>
-        </div>
-      </div>
-    </section>
     <section class="font-demo">
       <form action="" class="font-controls" onsubmit="return false">
         <label for="demo-axis">Disorientation horizontal axis (rxad): </label>
         <output></output>
         <input type="range" min="0" max="100" value="0" name="demo-axis-x" id="demo-axis-x"
           oninput="this.previousElementSibling.value = this.value">
-          <label for="demo-axis">Disorientation vertical axis (ryad): </label>
-          <output></output>
+        <label for="demo-axis">Disorientation vertical axis (ryad): </label>
+        <output></output>
         <input type="range" min="0" max="100" value="0" name="demo-axis-y" id="demo-axis-y"
           oninput="this.previousElementSibling.value = this.value">
         <fieldset class="demo-controls-text">
@@ -288,20 +216,21 @@
       <div class="description">
         <h4>Testing assets</h4>
         <p>The tests are conducted on the <a href="https://www.typography.com/blog/text-for-proofing-fonts">Hoefler's
-            Proof uppercase 1.0</a>, whis is an illustrative list of english words, organized logically. Using this list
+            Proof 1.0</a>, which is an illustrative list of english words, organized logically. Using this list
           instead of classic pangrams allows to test the font's legibility and OCR recognition in a more realistic
           context.</p>
         <p>Since this font in not really optimized for small sizes, descision was made to pull the testing text apart
           for shorter strings and use larger font size, even though it may have some influence on the final OCR score.
           If we use larger font size and fewer words in testing, it will on one hand speed up the recognition process,
-          but provide clearer shapes ofletters for OCR to work with. After some consideration, it was also assumed, that
+          but provide clearer shapes of letters for OCR to work with. After some consideration, it was also assumed,
+          that
           in such case there will be also less context on the test page for OCR to support a decision to recognise shape
           as a letter, so in the end it seemed like a fair trade-off.</p>
-        <p>In order to maintain uniformity, 3 testing sets were created - for 600, 650 and 700 along the weight axis.
-          For each weight two sizes were selected: 40pt and 80pt, with line height 100% of font size.</p>
+        <p>In order to maintain uniformity, 9 testing sets were created - for 0, 50 and 100 along both axis.
+          For each weight two sizes were selected: 40pt and 80pt, with line height 125% of font size.</p>
         <h4>Testing method</h4>
         <p>As a next step, test images containing sample text, set in selected font settings were generated. With 27
-          images per font setting, there are altogether 81 testing images for Disruption Monospace VF. Those were loaded
+          images per font setting, there are altogether 243 testing images for Disorientation Sans VF. Those were loaded
           individually into the <a href="/ocr">OCR testing environment</a>, recognition results documented in a
           screenshots and a score table and later evaluated. </p>
         <h4>Results</h4>
@@ -375,7 +304,8 @@
     </section>
     <section class="download">
       <h3>Take Disorientation Sans VF for a spin!</h3>
-      <a href="https://github.com/k00lthing/disorientation-font" title="To the font GitHub repository">Disorientation Sans
+      <a href="https://github.com/k00lthing/disorientation-font" title="To the font GitHub repository">Disorientation
+        Sans
         VF
         on GitHub</a>
     </section>

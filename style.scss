@@ -83,21 +83,24 @@ main {
         grid-column: 1 / 7;
         margin-block-end: 2rem;
 
-        &.info,
-        &.ocr-test {
-            display: grid;
-            grid-template-columns: subgrid;
-
-            .description {
-                grid-column: 1 / 4;
+        @media only screen and (min-width: 768px) {
+            &.info,
+            &.ocr-test {
+                display: grid;
+                grid-template-columns: subgrid;
+    
+                .description {
+                    grid-column: 1 / 4;
+                }
+    
+                .images {
+                    grid-column: 4 / 7;
+                }
             }
 
-            .images {
-                grid-column: 4 / 7;
-            }
+
         }
     }
-
 
     &#ocr-env {
         .tesseract-input {
@@ -245,8 +248,9 @@ section.ocr-info {
     }
 }
 
-.demo-result.resolution {
+.demo-result {
     background: white;
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
     border: 1px solid variables.$off-black;
 }
+
