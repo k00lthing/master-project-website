@@ -58,3 +58,11 @@ p.subline {
     font-size: 5rem;
     line-height: 1;
 }
+
+.disorientation {
+    font-family: 'Disorientation Sans VF';
+    font-variation-settings: 'rxad' var(--disorientation-font-axis-x),
+    'ryad' var(--disorientation-font-axis-y);
+    font-size: 5rem;
+    line-height: 2;
+}
