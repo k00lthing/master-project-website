@@ -129,6 +129,7 @@ main {
             padding: 2rem;
             min-height: 60dvh;
             max-width: 100%;
+            grid-column: 1 / 7;
 
             img.background-img {
                 opacity: 0.6;
@@ -170,8 +171,14 @@ section.ocr-info {
 
 
 @media only screen and (min-width: 768px) {
-    main.landing {
-        grid-template-columns: 1fr 1fr 1fr;
+    main.landing article#resolution {
+        grid-column: 1 / 3;
+    }
+    main.landing article#disruption {
+        grid-column: 3 / 5;
+    }
+    main.landing article#disorientation {
+        grid-column: 5 / 7;
     }
 
     section.ocr-info {
