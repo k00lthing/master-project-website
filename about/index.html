@@ -15,15 +15,51 @@
     <h2>About the Project</h2>
     <section>
       <h3>Idea</h3>
-      <p class="hyphenate">text</p>
-      <a href="https://github.com/tesseract-ocr" title="To the GitHub Organisation Tesseract OCR"
-        target="_blank">Tesseract OCR on GitHub</a>
-      <h3>Methodology</h3>
-      <p class="hyphenate">Experimental typography is a creative approach to typography that breaks the traditional rules and explores new techniques and styles.</p>
+      <p class="hyphenate">This project started with a contemplating about readability, legibility, and its role in type
+        design. The theory goes as follows: legibility is the ease with which a reader can decode individual symbols,
+        while readably is the ease with which a reader can follow and understand words, sentences, and paragraphs.
+        Traditionally, type design practitioners strive to construct their typefaces to be legible and readable in all
+        different situations and applications, which is a long and dire process involving lots of compromises. But who
+        tells what is legible and/or readable? And what is legible and/or readable for whom?</p>
+
+      <p class="hyphenate">The technology of optical character recognition (OCR) has become a ubiquitous and essential
+        part of many applications. I, personally, used it for a long time without giving it much though, until I watched
+        <a href="https://media.ccc.de/v/31c3_-_6558_-_de_-_saal_g_-_201412282300_-_traue_keinem_scan_den_du_nicht_selbst_gefalscht_hast_-_david_kriesel#t=1449"
+          target="_blank" rel="noopener noreferrer">David Kriesel’s 2014 CCC congress talk “Don't trust any scan that
+          you haven't faked yourself” (originally in German “Traue keinem Scan, den du nicht selbst gefälscht
+          hast“)</a>. The case revolves around XEROX copy machines mysteriously changing numbers on scanned documents.
+        David goes to the bottom of it and discovers that the problem is caused by pattern matching of JBig2 image
+        compression algorithm. Dangerous little error, causing thousands of scanned documents to be infested with wrong
+        data. It got me thinking about optical character recognition systems, which in some sense is also a scanning
+        process. Normally, one would want an OCR system to recognise the text perfectly. Imagine, how great it can be —
+        snap a photo or screenshot and just copy the text on the picture instead of tedious typing down the text from
+        the picture. But what if I don’t want my text to be recognisable? Can I have a text, legible and/or readable for
+        humans, but problematic for OCR software? </p>
+
+      <p class="hyphenate">Type design has been on my radar for some time, I even extended the character sets of some
+        typefaces (for example, if I needed Latin extended characters like ü, å or ø), but I never designed a complete
+        typeface before. Now I wanted to start a series of typographic experiments in order to design type, which is
+        readable only by humans. To limit my experiments, I decided to only use traditional graphic designer “weapons” —
+        space and negative space, along with OpenType features, which give me control over glyph position and
+        substitution and Variable Font technology.</p>
+
       <h3>Outline</h3>
-      <p class="hyphenate">text</p>
-      <a href="http://tesseract.projectnaptha.com/" title="To the official page of tesseract.js" target="_blank">More
-        about tesseract.js</a>
+      <p class="hyphenate">As a first step, I needed to figure out some strategy. After extensive reading on how OCR
+        works, testing some typefaces with an OCR system of my choice, and asking questions about how we humans read and
+        how our brain helps us find patterns and address the information deficiencies, three strategies have been
+        developed. The first one plays with the human capability of recognising the letter shape, the second uses our
+        ability to fill the gaps and the third one employs the ability of spatial reasoning.</p>
+
+      <a class="link" href="/resolution" title="To the Resolution Display VF page " target="_blank">More about Resolution Display VF</a>
+      <a class="link" href="/disruption" title="To the Disruption Monospace VF page " target="_blank">More about Disruption Monospace VF</a>
+      <a class="link" href="/disorientation" title="To the Disorientation Sans VF page " target="_blank">More about Disorientation Sans VF</a>
+
+      <p class="hyphenate">For each strategy I decided to draw a basic set of glyphs A-Z, a-z and 0-9, leaving out
+        punctuation, symbols, and marks. For the resulting three typefaces, I conducted a series of tests to determine
+        how well the text set in this typeface will be recognised by Tesseract, the OCR of my choice. Testing my three
+        typefaces — Resolution Display VF, Disruption Monospace VF and Disorientation Sans VF brought some interesting
+        and sometimes unexpected results as well as raised questions about score reliability of deep learning software.
+      </p>
     </section>
   </main>
   <script type="module" src="/about/main.js"></script>
